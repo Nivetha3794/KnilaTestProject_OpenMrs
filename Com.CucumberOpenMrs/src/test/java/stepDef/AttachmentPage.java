@@ -9,9 +9,12 @@ import org.openqa.selenium.WebElement;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
+ 
 
-public class AttachmentPage {
-	WebDriver driver;
+public class AttachmentPage extends AbstractTest {
+	//WebDriver driver;
+	
 	@Given("User is on the attachment page")
 	public void user_is_on_the_attachment_page() {
 		driver.getTitle();
