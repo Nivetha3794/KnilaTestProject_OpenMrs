@@ -1,5 +1,5 @@
-Feature: File Attachment Upload
-
+#Feature: File Attachment Upload
+#
   #Scenario: User uploads an attachment
     #Given User is on the upload page
     #When User selects a file to upload

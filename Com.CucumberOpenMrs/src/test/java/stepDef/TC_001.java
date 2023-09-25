@@ -12,15 +12,17 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TC_001 {
+public class TC_001 extends AbstractTest {
 
-	WebDriver driver;
+	//WebDriver driver;
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
 		WebDriverManager.edgedriver().setup();
 		driver=new EdgeDriver();
 		driver.get("https://qa-refapp.openmrs.org/openmrs/login.htm");
+		driver.manage().window().maximize();
 		//driver=DriverFactory.getDriver();
+		
 		driver.getTitle();
 	}
 
