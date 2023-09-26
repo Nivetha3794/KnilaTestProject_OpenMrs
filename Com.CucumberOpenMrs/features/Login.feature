@@ -7,14 +7,18 @@ Feature: Validate Login Feature
     And user clicks on Login button
     And user navigated to Register a Patient page
 		When user enters "<givenname>" and "<middlename>" and "<familyname>"
-		When User selects Unidentified Patient
-		When User selects gender
-		And User clicks on continue and confirm button
-		Then User account should get created sucessfully
+#		When User selects Unidentified Patient
+		When user clicks continue by selects gender
+		And User Clicks next button enters 03 and "<month>" and 2000
+#		When User selects gender
+		When user enters address details and phonenumber
+		And User enters the "<reltype>" and "<personname>"
+		And User clicks by continue and validating the information
+		Then User clicks confirm button should get account created sucessfully
 		
 Examples:
-    |username|password|givenname|middlename|familyname|
-    |Admin|Admin123|Nivetha|S|sri|
+    |username|password|givenname|middlename|familyname|month|reltype|personname|
+    |Admin|Admin123|Nivetha|S|sri|May|Parent|Micheal|
     
 Scenario: Uploade file in the File attachment page
 	Given User is on the attachment page
